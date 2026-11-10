@@ -50,3 +50,27 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+
+// Dietary Services
+let person = "Employee";
+let dietary_service_message;
+
+switch (person) {
+    case "Employee":
+        dietary_service_message = "Authorized to Dietary Services.";
+        break;
+    case "Enrolled Member":
+        dietary_service_message = "Authorized to Dietary Services and one-on-one interaction with a dietician.";
+        break;
+    case "Subscriber":
+        dietary_service_message = "Partial access to to Dietary Services.";
+        break;
+
+    default:
+        // Non-Subscriber
+        dietary_service_message = "Need to enroll to avail service.";
+        break;
+}
+
+console.log("Dietary Services:", dietary_service_message);
